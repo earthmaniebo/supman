@@ -1,0 +1,914 @@
+{
+	"info": {
+		"_postman_id": "cb1482ce-9cd1-490e-b8ee-91eb044794a2",
+		"name": "Notification Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Core APIs",
+			"item": [
+				{
+					"name": "Get numbers contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requests\": [\n        {\n            \"identifier\": \"card_number\",\n            \"numbers\": [\n                \"001015348\"\n            ]\n        },\n        {\n            \"identifier\": \"cif\",\n            \"numbers\": [\n                \"0014742053\"\n            ]\n        },\n        {\n            \"identifier\": \"cb_id\",\n            \"numbers\": [\n                \"100701\",\n                \"77235662\",\n                \"77222400\",\n                \"77235481\",\n                \"77235484\",\n                \"77235661\",\n                \"77235660\"\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1.10/notification-service/notification/cb-ids",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1.10",
+								"notification-service",
+								"notification",
+								"cb-ids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cbid contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requests\": [\n    \t{\n    \t\t\"identifier\": \"cb_id\",\n    \t\t\"numbers\": [\"001015348\"]\n    \t},\n    \t{\n    \t\t\"identifier\": \"cif\",\n    \t\t\"numbers\": [\"0014742053\"]\n    \t}\n    \t\n    \t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1.10/notification-service/notification/numbers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1.10",
+								"notification-service",
+								"notification",
+								"numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cif contact Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requests\": [\n    \t{\n    \t\t\"identifier\": \"card_number\",\n    \t\t\"numbers\": [\"001015348\"]\n    \t},\n    \t{\n    \t\t\"identifier\": \"cif\",\n    \t\t\"numbers\": [\"0014742053\"]\n    \t}\n    \t\n    \t]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1.10/notification-service/notification/numbers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1.10",
+								"notification-service",
+								"notification",
+								"numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cif contact service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/notification-service/api/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"notification-service",
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "634803b7-8e2b-46b7-907f-2b2d4031768e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "174326e5-61cf-4fcb-a868-ad1da65bb7d8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "Send Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Id",
+								"value": "123",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Secret",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\": [\n        \"kcaega@gmail.com\"\n    ],\n    \"body\": \"<h1>Hello world test32</h1>\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/notification-service/api/send-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"notification-service",
+								"api",
+								"send-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save scheduled email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-ibm-client-id",
+								"type": "text",
+								"value": "abd6ceb5-02cd-4417-b7dd-f2ae6e0b940b"
+							},
+							{
+								"key": "x-ibm-client-secret",
+								"type": "text",
+								"value": "fW2rS1jG3dG1kK5cB7qF8rW6aK1oX3bY6nP3oT4mF8cM1sM1mW"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requests\": [\n        {\n            \"to\": [\n                \"kcaega@gmail.com\"\n            ],\n            \"subject\": \"sched Test subject\",\n            \"body\": \"sched Test body\",\n            \"send_date\": \"2019-06-31T00:00:00.000Z\"\n        },\n        {\n            \"to\": [\n                \"kenneth.canega@whitecloak.com\"\n            ],\n            \"subject\": \"sched Test subject 2\",\n            \"body\": \"sched Test body 2\",\n            \"send_date\": \"2019-06-31T00:00:00.000Z\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8200/notification/api/scheduled-email/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8200",
+							"path": [
+								"notification",
+								"api",
+								"scheduled-email",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email APIC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-IBM-Client-Id",
+								"type": "text",
+								"value": "abd6ceb5-02cd-4417-b7dd-f2ae6e0b940b"
+							},
+							{
+								"key": "X-IBM-Client-Secret",
+								"type": "text",
+								"value": "fW2rS1jG3dG1kK5cB7qF8rW6aK1oX3bY6nP3oT4mF8cM1sM1mW"
+							},
+							{
+								"key": "x-client-application-id",
+								"value": "1C5E231C3DB6FF9AAD82A500CA02BF861847F015",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"to\": \"639152890838\",\n\t\"message\": \"This is a test message, kindly ignore.\"\n}"
+						},
+						"url": {
+							"raw": "https://api-uat.unionbankph.com/ubp/uat/mtu/v1/sms/send",
+							"protocol": "https",
+							"host": [
+								"api-uat",
+								"unionbankph",
+								"com"
+							],
+							"path": [
+								"ubp",
+								"uat",
+								"mtu",
+								"v1",
+								"sms",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SMS",
+			"item": [
+				{
+					"name": "Send SMS APIC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"value": "123",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Secret",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"to\": \"639152890838\",\n\t\"message\": \"This is a test message, kindly ignore.\"\n}"
+						},
+						"url": {
+							"raw": "https://api-uat.unionbankph.com/ubp/uat/mtu/v1/sms/send",
+							"protocol": "https",
+							"host": [
+								"api-uat",
+								"unionbankph",
+								"com"
+							],
+							"path": [
+								"ubp",
+								"uat",
+								"mtu",
+								"v1",
+								"sms",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send SMS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"value": "123",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Secret",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\": \"09152890838\",\n    \"message\": \"This is a test message, kindly ignore.\"\n}"
+						},
+						"url": {
+							"raw": "http://10.51.1.191:9001/notification/api/send-sms",
+							"protocol": "http",
+							"host": [
+								"10",
+								"51",
+								"1",
+								"191"
+							],
+							"port": "9001",
+							"path": [
+								"notification",
+								"api",
+								"send-sms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Send SMS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Client-Id",
+										"value": "123",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Secret",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"to\": \"09989567224\",\n    \"message\": \"This is a test message, kindly ignore.\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/notification/api/send-sms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"notification",
+										"api",
+										"send-sms"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 08:16:51 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"SMS has been successfully sent.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Notify User by account details",
+			"item": [
+				{
+					"name": "Notify by account details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"type": "text",
+								"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+							},
+							{
+								"key": "X-Client-Secret",
+								"type": "text",
+								"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"77221580\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"Insurance Account Below Minimum Balance\",\n                \"body\": \"Your account is currently below the aggreed minimum account balance of PHP 25,000.00. Please maintain the agreed balance to keep your insurance account, If balance has not been met for 6 consecutive months, your accoun will be reclassified to personal savings account.\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta\": \"view\"\n            },\n            \"email\": {\n            \t\"subject\": \"test\",\n            \t\"message\": \"test\"\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8200/notification-service/api/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8200",
+							"path": [
+								"notification-service",
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e7aa75b1-752a-4ef1-a2a1-109a2048e958",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "25aabd58-4dda-427b-9a55-5badf6e3712a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "inbox",
+			"item": [
+				{
+					"name": "Send inbox notif by account details Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"type": "text",
+								"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+							},
+							{
+								"key": "X-Client-Secret",
+								"type": "text",
+								"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"77221869\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"Insurance Account Below Minimum Balance\",\n                \"body\": \"Your account is currently below the aggreed minimum account balance of PHP 25,000.00. Please maintain the agreed balance to keep your insurance account, If balance has not been met for 6 consecutive months, your accoun will be reclassified to personal savings account.\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta1\": \"view\",\n                \"cta\": \"dao_insular_reclassify\"\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.51.1.191:9002/notification-service/api/notification",
+							"protocol": "http",
+							"host": [
+								"10",
+								"51",
+								"1",
+								"191"
+							],
+							"port": "9002",
+							"path": [
+								"notification-service",
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save to advisory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Client-Id",
+										"type": "text",
+										"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+									},
+									{
+										"key": "X-Client-Secret",
+										"type": "text",
+										"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"100701\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"DAO Insular test!\",\n                \"body\": \"insert to promo tab\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta\": \"dao_insular_reclassify\",\n                \"details\": {\n                    \"insular_status\": \"test 123\"\n                }\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8200/notification-service/api/notification",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8200",
+									"path": [
+										"notification-service",
+										"api",
+										"notification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Aug 2019 05:51:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Notification has been successfully processed.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send inbox notif by account details Copy Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"type": "text",
+								"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+							},
+							{
+								"key": "X-Client-Secret",
+								"type": "text",
+								"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"77221869\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"Insurance Account Below Minimum Balance\",\n                \"body\": \"Your account is currently below the aggreed minimum account balance of PHP 25,000.00. Please maintain the agreed balance to keep your insurance account, If balance has not been met for 6 consecutive months, your accoun will be reclassified to personal savings account.\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta1\": \"view\",\n                \"cta\": \"dao_insular_reclassify\"\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.51.1.191:9002/notification-service/api/notification",
+							"protocol": "http",
+							"host": [
+								"10",
+								"51",
+								"1",
+								"191"
+							],
+							"port": "9002",
+							"path": [
+								"notification-service",
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save to advisory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Client-Id",
+										"type": "text",
+										"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+									},
+									{
+										"key": "X-Client-Secret",
+										"type": "text",
+										"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"100701\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"DAO Insular test!\",\n                \"body\": \"insert to promo tab\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta\": \"dao_insular_reclassify\",\n                \"details\": {\n                    \"insular_status\": \"test 123\"\n                }\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8200/notification-service/api/notification",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8200",
+									"path": [
+										"notification-service",
+										"api",
+										"notification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Aug 2019 05:51:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Notification has been successfully processed.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send inbox notif by account details Copy Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Client-Id",
+								"type": "text",
+								"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+							},
+							{
+								"key": "X-Client-Secret",
+								"type": "text",
+								"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"app_id\": \"d38d5a61-1923-4b8a-a54b-b588982808e0\",\n\t\"include_player_ids\": [\"0db651bb-9276-409f-8c8a-f059270c0023\"],\n\t\"data\": null,\n\t\"contents\": {\n\t\t\"en\": \"Your account is currently below the aggreed minimum account balance of PHP 25,000.00. Please maintain the agreed balance to keep your insurance account, If balance has not been met for 6 consecutive months, your accoun will be reclassified to personal savings account.\"\n\t},\n\t\"headings\": {\n\t\t\"en\": \"Insurance Account Below Minimum Balance\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ucore/api/v1.10/notification-service/push-notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ucore",
+								"api",
+								"v1.10",
+								"notification-service",
+								"push-notification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save to advisory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Client-Id",
+										"type": "text",
+										"value": "f474a5fc-2a90-c498-91c22-c9aef40c815"
+									},
+									{
+										"key": "X-Client-Secret",
+										"type": "text",
+										"value": "RmhKt7PXLRGTZFa4MYykyxfwPCyS2OZJboKtKrxXzei7XLJNOF"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notifications\": [\n        {\n            \"customers\": [\n                \"100701\"\n            ],\n            \"identifier\": \"CB_ID\",\n            \"inbox\": {\n                \"subject\": \"DAO Insular test!\",\n                \"body\": \"insert to promo tab\",\n                \"push\": true,\n                \"category\": 2,\n                \"icon\": 18,\n                \"cta\": \"dao_insular_reclassify\",\n                \"details\": {\n                    \"insular_status\": \"test 123\"\n                }\n            }\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8200/notification-service/api/notification",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8200",
+									"path": [
+										"notification-service",
+										"api",
+										"notification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Aug 2019 05:51:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Notification has been successfully processed.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
